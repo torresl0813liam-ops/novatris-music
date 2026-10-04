@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Music by Novatris — listen and download tracks.">
+  <title>Novatris — Music</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars"></div>
+  <main class="site-shell">
+    <header class="hero">
+      <div class="eyebrow">MUSIC ARCHIVE</div>
+      <h1>NOVATRIS</h1>
+      <p>ambient sounds from somewhere beyond the stars</p>
+    </header>
+
+    <section class="album-card">
+      <div class="album-art-wrap">
+        <img id="albumArt" src="artwork/cover.svg" alt="Album artwork">
+      </div>
+      <div class="album-info">
+        <span class="label">FEATURED RELEASE</span>
+        <h2 id="albumTitle">Beyond The Stars</h2>
+        <p id="albumDescription">Ambient music, soundscapes, and distant places.</p>
+        <div class="album-actions">
+          <button class="primary-btn" id="playAll">▶ Play All</button>
+          <a class="secondary-btn" id="downloadAll" href="#" download>↓ Download Album</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tracks-section">
+      <div class="section-heading">
+        <h2>TRACKS</h2>
+        <span id="trackCount"></span>
+      </div>
+      <div id="trackList" class="track-list"></div>
+    </section>
+
+    <section class="license-card">
+      <div class="license-icon">✦</div>
+      <div>
+        <h2>Using my music?</h2>
+        <p>
+          You can use these tracks in your videos. Please credit <strong>Novatris</strong>
+          somewhere in the video description.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> Novatris</span>
+      <span>made for the journey beyond the stars</span>
+    </footer>
+  </main>
+
+  <div class="player" id="player">
+    <div class="player-track">
+      <div class="mini-art"><img id="playerArt" src="artwork/cover.svg" alt=""></div>
+      <div class="now-playing">
+        <span>NOW PLAYING</span>
+        <strong id="nowTitle">Nothing playing</strong>
+      </div>
+    </div>
+    <div class="player-controls">
+      <button id="prevBtn" aria-label="Previous track">⏮</button>
+      <button id="mainPlayBtn" class="big-play" aria-label="Play">▶</button>
+      <button id="nextBtn" aria-label="Next track">⏭</button>
+    </div>
+    <div class="progress-area">
+      <span id="currentTime">0:00</span>
+      <input id="progress" type="range" min="0" max="100" value="0">
+      <span id="duration">0:00</span>
+    </div>
+    <button id="closePlayer" class="close-player" aria-label="Close player">×</button>
+  </div>
+
+  <audio id="audio" preload="metadata"></audio>
+  <script src="music.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
